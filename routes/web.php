@@ -14,4 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 use App\Http\Controllers\BukuController;
 
-Route::resource('perpustakaan',BukuController::class);
+Route::resource('buku',BukuController::class);
+
+Route::put('/buku/{id}/pinjam', [BukuController::class, 'pinjam']);
+Route::put('/buku/{id}/pengembalian', [BukuController::class, 'pengembalian']);
